@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Football Query System</title>
+  </head>
+  <body>
+    <h1>Football Query System</h1>
+
+    <!-- 1. List all players in a team -->
+    <form action="list_team_players.php" method="POST">
+      <h3>List all players in a team</h3>
+      <label for="team_name">Team Name:</label>
+      <input type="text" id="team_name" name="team_name" />
+      <button type="submit">List Players</button>
+    </form>
+    <hr />
+
+    <!-- 2. List all transfers of a team in a specific year -->
+    <form action="list_team_transfers.php" method="POST">
+      <h3>List all transfers of a team in a specific year</h3>
+      <label for="team_name_transfer">Team Name:</label>
+      <input type="text" id="team_name_transfer" name="team_name" required />
+      <label for="year">Year:</label>
+      <input type="number" id="year" name="year" required />
+      <button type="submit">List Transfers</button>
+    </form>
+    <hr />
+
+    <!-- 4. List all players of a specific agent -->
+    <form action="list_players_in_salary_range.php" method="POST">
+      <h3>Get all players with a specific salary range</h3>
+      <label for="min_salary">Lower bound:</label>
+      <input type="text" id="min_salary" name="min_salary" required />
+      <label for="max_salary">Upper bound:</label>
+      <input type="text" id="max_salary" name="max_salary" required />
+      <button type="submit">List Players</button>
+    </form>
+    <hr />
+
+    <form action="list_all_leagues.php" method="POST">
+      <h3>List all leagues</h3>
+      <button type="submit">List Leagues</button>
+    </form>
+    <hr />
+
+    <!-- 5. List all teams in a league -->
+    <form action="list_league_teams.php" method="POST">
+      <h3>List all teams in a league</h3>
+      <label for="league_name">League Name:</label>
+      <input type="text" id="league_name" name="league_name" />
+      <button type="submit">List Teams</button>
+    </form>
+    <hr />
+
+    <form action="add_to_transfer_list.php" method="POST">
+      <h3>Add to transfer list</h3>
+      <label for="manager_id">Your manager ID:</label>
+      <input type="text" id="manager_id" name="manager_id" required />
+      <button type="submit">List all of your players</button>
+    </form>
+    <hr />
+    <form action="view_offers.php" method="POST">
+      <h3>View offers for an agent</h3>
+      <label for="agent_id">Your agent ID:</label>
+      <input type="text" id="agent_id" name="agent_id" required />
+      <button type="submit">List all offers for you players</button>
+    </form>
+    <hr />
+    <form action="view_done_deals.php" method="POST">
+      <h3>View Done Deals</h3>
+      <button type="submit">List all done deals</button>
+    </form>
+    <hr />
+    <form action="get_transfer_list.php" method="POST">
+      <h3>View Transfer List</h3>
+      <button type="submit">List Players</button>
+    </form>
+    <hr />
+    <form action="add_player.php" method="POST">
+      <h3>Add New Player</h3>
+      <label for="Player_id">Player ID:</label>
+      <input type="text" id="player_id" name="player_id" required />
+      <label for="Player Name">Player Name:</label>
+      <input type="text" id="player_name" name="player_name" required />
+      <label for="Player Salary">Player Salary:</label>
+      <input type="text" id="player_salary" name="player_salary" required />
+      <label for="age">Age:</label>
+      <input
+        type="number"
+        id="age"
+        name="player_age"
+        placeholder="e.g., 25"
+        required
+      />
+      <label for="position">Position:</label>
+      <input
+        type="text"
+        id="position"
+        name="player_position"
+        placeholder="e.g., Midfielder"
+      />
+      <label for="foot">Foot:</label>
+      <input type="text" id="prefered_foot" name="prefered_foot" />
+      <label for="team_name">Team Name:</label>
+      <input type="text" id="team_name" name="team_name" required />
+      <label for="foot">Agent ID:</label>
+      <input type="text" id="agent_id" name="agent_id" required />
+      <button type="submit">Add Player</button>
+    </form>
+    <hr />
+    <form action="add_team.php" method="POST">
+      <h3>Add Team</h3>
+      <label for="team_name">Team Name:</label>
+      <input type="text" id="team_name" name="team_name" required />
+      <label for="league_name">League Name:</label>
+      <input type="text" id="league_name" name="league_name" required />
+      <label for="city">City of the team:</label>
+      <input type="text" id="city" name="city" required />
+      <button type="submit">Add</button>
+    </form>
+  </body>
+</html>
